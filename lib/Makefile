@@ -7,7 +7,7 @@
 
 SRC =  $(shell find ./ -name "*.c")
 
-OBJ =   $(SRC:.c=.o)
+OBJ =  $(SRC:.c=.o)
 
 NAME =  libmy.a
 
@@ -20,6 +20,6 @@ clean:
 fclean:     clean
 	@rm -f $(NAME)
 
-re:	        fclean all
+re:	    fclean all
 
 .PHONY: $(NAME) all clean fclean re
