@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** B-CPE-210-STG-2-1-stumper7-antoine.kuhn
+** xavier_schahl
 ** File description:
 ** main
 */
