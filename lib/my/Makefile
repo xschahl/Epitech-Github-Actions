@@ -1,31 +1,28 @@
 ##
-## EPITECH PROJECT, 2021
-## B-CPE-100-STG-1-1-cpoolday10-pierre.maurer
+## EPITECH PROJECT, 2022
+## xavier_schahl
 ## File description:
 ## Makefile
 ##
 
-SRC =	$(shell find ./ -name "*.c")
+SRC =  $(shell find ./ -name "*.c")
 
-OBJ =    $(SRC:.c=.o)
+OBJ =   $(SRC:.c=.o)
 
-NAME =	libmy.a
+NAME =  libmy.a
 
-all:	$(NAME)
-
-$(NAME):	$(OBJ)
-	ar rc $(NAME) $(OBJ)
-	cp my.h ../../include/
-	cp list.h ../../include/
-	cp $(NAME) ../
+all:	        $(OBJ)
+	@ar rc $(NAME) $(OBJ)
+	@cp my.h ../../include/
+	@cp list.h ../../include/
+	@cp $(NAME) ../
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
-fclean: clean
-	rm -f $(NAME)
-	rm -f ../$(NAME)
+fclean:         clean
+	@rm -f $(NAME) ../$(NAME)
 
-re: fclean all
+re:	        fclean all
 
-.PHONY: re clean fclean all
+.PHONY: $(NAME) all clean fclean re
