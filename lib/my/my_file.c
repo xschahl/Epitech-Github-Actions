@@ -5,7 +5,7 @@
 ** my.h
 */
 
-#include "my.h"
+#include "lib.h"
 
 char *my_file(char *filename, char *buffer)
 {
