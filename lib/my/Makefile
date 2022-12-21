@@ -13,8 +13,6 @@ NAME =  libmy.a
 
 all:	        $(OBJ)
 	@ar rc $(NAME) $(OBJ)
-	@cp my.h ../../include/
-	@cp list.h ../../include/
 	@cp $(NAME) ../
 
 clean:
