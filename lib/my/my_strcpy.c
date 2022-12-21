@@ -5,7 +5,7 @@
 ** write a function that copies a string
 */
 
-#include "my.h"
+#include "lib.h"
 
 char *my_strcpy(char *dest , char const *src)
 {

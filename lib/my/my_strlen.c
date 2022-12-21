@@ -5,7 +5,7 @@
 ** counts and return the number of character of a string passed in params
 */
 
-#include "my.h"
+#include "lib.h"
 
 int my_strlen(char const *str)
 {

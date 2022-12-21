@@ -5,7 +5,7 @@
 ** list.c
 */
 
-#include "my.h"
+#include "lib.h"
 
 char *my_strncpy(char *dest, char const *src, int nb)
 {

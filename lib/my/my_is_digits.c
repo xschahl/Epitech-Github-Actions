@@ -5,7 +5,7 @@
 ** error
 */
 
-#include "my.h"
+#include "lib.h"
 
 int my_is_digits(char *str)
 {

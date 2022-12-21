@@ -5,7 +5,7 @@
 ** list.c
 */
 
-#include "my.h"
+#include "lib.h"
 
 static int *my_intncpy(int *dest, char const *src, int n)
 {

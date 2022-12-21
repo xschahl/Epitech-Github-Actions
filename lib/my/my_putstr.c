@@ -5,7 +5,7 @@
 ** display one by one character of a string
 */
 
-#include "my.h"
+#include "lib.h"
 
 void my_putstr(char const *str)
 {

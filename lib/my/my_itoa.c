@@ -5,7 +5,7 @@
 ** my_itoa.c
 */
 
-#include <stdlib.h>
+#include "lib.h"
 
 static int my_nbrlen(int nbr)
 {

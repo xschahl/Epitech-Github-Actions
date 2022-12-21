@@ -5,9 +5,7 @@
 ** my getnbr
 */
 
-#include "my.h"
-
-#include <stdio.h>
+#include "lib.h"
 
 int is_digits(int digit)
 {

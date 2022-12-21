@@ -5,7 +5,7 @@
 ** list.c
 */
 
-#include "my.h"
+#include "lib.h"
 
 char **my_str_to_word_array(char const *argv)
 {

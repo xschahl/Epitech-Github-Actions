@@ -5,7 +5,7 @@
 ** my_pourcent
 */
 
-#include "my.h"
+#include "lib.h"
 
 void my_pourcent(va_list args)
 {

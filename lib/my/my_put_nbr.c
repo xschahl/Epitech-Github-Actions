@@ -5,9 +5,7 @@
 ** display a number given as param
 */
 
-#include <stdio.h>
-#include <unistd.h>
-#include "my.h"
+#include "lib.h"
 
 void my_put_nbr(int nb)
 {

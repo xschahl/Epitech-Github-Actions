@@ -5,8 +5,7 @@
 ** Write a function that allocates memory
 */
 
-#include <stdlib.h>
-#include "my.h"
+#include "lib.h"
 
 char *my_strdup(char const *src)
 {

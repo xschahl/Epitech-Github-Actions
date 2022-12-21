@@ -5,7 +5,7 @@
 ** my_printf
 */
 
-#include "my.h"
+#include "lib.h"
 
 int flags(char *str, va_list args)
 {

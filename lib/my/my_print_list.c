@@ -5,8 +5,7 @@
 ** list.c
 */
 
-#include "list.h"
-#include "my.h"
+#include "lib.h"
 
 linked_list_t *my_print_list(linked_list_t *list)
 {

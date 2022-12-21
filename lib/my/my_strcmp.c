@@ -5,7 +5,7 @@
 ** write a function that copies a string
 */
 
-#include "my.h"
+#include "lib.h"
 
 int my_strcmp(const char *a, const char *b)
 {

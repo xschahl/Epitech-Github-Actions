@@ -5,7 +5,7 @@
 ** error.c
 */
 
-#include "my.h"
+#include "lib.h"
 
 void my_print_tab(char **map)
 {

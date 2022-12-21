@@ -5,7 +5,7 @@
 ** my_print_char
 */
 
-#include "my.h"
+#include "lib.h"
 
 void my_print_char(va_list args)
 {

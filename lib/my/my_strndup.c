@@ -5,7 +5,7 @@
 ** my_strndup
 */
 
-#include "my.h"
+#include "lib.h"
 
 char *my_strndup(char const *src, int nb)
 {

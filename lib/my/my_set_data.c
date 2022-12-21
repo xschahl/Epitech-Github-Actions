@@ -5,7 +5,7 @@
 ** list.c
 */
 
-#include "list.h"
+#include "lib.h"
 
 int my_set_data(linked_list_t *list, int data, int pos)
 {

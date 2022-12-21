@@ -5,7 +5,7 @@
 ** write
 */
 
-#include "my.h"
+#include "lib.h"
 
 char *my_strncat(char *dest, char const *src, int nb)
 {
