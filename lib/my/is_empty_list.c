@@ -5,7 +5,7 @@
 ** is_empty_list.c
 */
 
-#include "list.h"
+#include "../../../include/list.h"
 
 int is_empty_list(linked_list_t *list)
 {
