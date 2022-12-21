@@ -21,7 +21,7 @@ NAME =	main
 
 all:		$(OBJ)
 	@make -C ./lib/my
-	gcc -o $(NAME) $(OBJ) $(LIB) $(FLAGS)
+	@gcc -o $(NAME) $(OBJ) $(LIB) $(FLAGS)
 	@echo "\n\033[01;38;5;10m================ Compiling: Done =======\
 	=====\033[0;0m\n"
 
@@ -38,17 +38,17 @@ fclean:		clean
 re:	        fclean all
 
 unit_tests:
-	rm -f unit_tests *.gcda *.gcno
-	make -C ./lib/my
-	gcc -o unit_tests $(SRC) $(UNIT) $(TEST) $(LIB)
-	"\n\033[01;38;5;10m================ Compiling tests: Done ======\
+	@rm -f unit_tests *.gcda *.gcno
+	@make -C ./lib/my
+	@gcc -o unit_tests $(SRC) $(UNIT) $(TEST) $(LIB)
+	@echo "\n\033[01;38;5;10m================ Compiling tests: Done ======\
 	=\033[0;0m\n"
 
 run_tests:	unit_tests
 	./unit_tests
 	
 tclean:	    clean
-	rm -f unit_tests *.gcda *.gcno
+	@rm -f unit_tests *.gcda *.gcno
 	@echo "\n\033[01;38;5;10m================ tclean: Done =======\
 	========\033[0;0m\n"
 
