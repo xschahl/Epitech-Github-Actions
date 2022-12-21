@@ -11,15 +11,14 @@ OBJ =   $(SRC:.c=.o)
 
 NAME =  libmy.a
 
-all:	        $(OBJ)
+all:	    $(OBJ)
 	@ar rc $(NAME) $(OBJ)
-	@cp $(NAME) ../
 
 clean:
 	@rm -f $(OBJ)
 
-fclean:         clean
-	@rm -f $(NAME) ../$(NAME)
+fclean:     clean
+	@rm -f $(NAME)
 
 re:	        fclean all
 
