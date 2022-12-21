@@ -5,7 +5,7 @@
 ** list.c
 */
 
-#include "list.h"
+#include "lib.h"
 
 linked_list_t *my_free_data(linked_list_t *list, int pos)
 {
