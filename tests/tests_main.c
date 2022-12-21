@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2021
 ** xavier.schahl
 ** File description:
-** tests_myprintf.c
+** tests_main.c
 */
 
 #include "../include/my.h"
