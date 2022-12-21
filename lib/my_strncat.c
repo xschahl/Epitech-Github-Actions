@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_strncat
+** xavier_schahl
 ** File description:
 ** write
 */

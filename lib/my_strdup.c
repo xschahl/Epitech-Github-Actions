@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_strdup
+** xavier_schahl
 ** File description:
 ** Write a function that allocates memory
 */

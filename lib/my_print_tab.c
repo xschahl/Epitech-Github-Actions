@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** solver
+** xavier_schahl
 ** File description:
 ** error.c
 */

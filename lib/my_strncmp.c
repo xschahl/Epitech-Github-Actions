@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_strcpy
+** xavier_schahl
 ** File description:
 ** write a function that copies a string
 */

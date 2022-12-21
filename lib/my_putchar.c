@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_putchar
+** xavier_schahl
 ** File description:
 ** display a character
 */

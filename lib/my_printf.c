@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** delivery
+** xavier_schahl
 ** File description:
 ** my_printf
 */

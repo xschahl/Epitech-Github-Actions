@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
-** error
+** xavier_schahl
 ** File description:
-** error
+** my_is_digits
 */
 
 #include "lib.h"

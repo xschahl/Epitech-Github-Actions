@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_put_nbr
+** xavier_schahl
 ** File description:
 ** display a number given as param
 */

@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_getnbr
+** xavier_schahl
 ** File description:
-** my getnbr
+** my_getnbr
 */
 
 #include "lib.h"

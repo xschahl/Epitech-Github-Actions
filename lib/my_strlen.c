@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_strlen
+** xavier_schahl
 ** File description:
 ** counts and return the number of character of a string passed in params
 */

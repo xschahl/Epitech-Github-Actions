@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_putstr
+** xavier_schahl
 ** File description:
 ** display one by one character of a string
 */

@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** MY_REVSTR
+** xavier_schahl
 ** File description:
 ** Reverses a string.
 */

@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** xavier.schahl
+** xavier_schahl
 ** File description:
 ** list.h
 */
@@ -19,7 +19,7 @@ linked_list_t *my_create_list(int data);
 linked_list_t *my_free_data(linked_list_t *list, int pos);
 linked_list_t *my_free_list(linked_list_t *list);
 linked_list_t *my_empty_list(void);
-int is_empty_list(linked_list_t *list);
+int my_is_empty_list(linked_list_t *list);
 linked_list_t *my_add_list(linked_list_t *list, int data, int pos);
 int my_list_len(linked_list_t *list);
 linked_list_t *my_print_list(linked_list_t *list);

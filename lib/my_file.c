@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** xavier.schahl
+** xavier_schahl
 ** File description:
 ** my.h
 */

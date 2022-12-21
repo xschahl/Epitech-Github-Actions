@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2021
-** lib my
+** xavier_schahl
 ** File description:
-** lib h
+** my.h
 */
 
 #include <stdarg.h>

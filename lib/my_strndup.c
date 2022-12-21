@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_strndup
+** xavier_schahl
 ** File description:
 ** my_strndup
 */
