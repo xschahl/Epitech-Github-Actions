@@ -11,7 +11,7 @@ int my_set_data(linked_list_t *list, int data, int pos)
 {
     char x;
 
-    if (is_empty_list(list) == 84)
+    if (my_is_empty_list(list) == 84)
         return x;
     for (int count = 0; count < pos; count++) {
         if (list->next == NULL) {

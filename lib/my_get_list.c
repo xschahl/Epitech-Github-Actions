@@ -9,7 +9,7 @@
 
 linked_list_t *my_get_list(linked_list_t *list, int pos)
 {
-    if (is_empty_list(list) == 84)
+    if (my_is_empty_list(list) == 84)
         return NULL;
     for (int count = 0; count < pos; count++) {
         if (list->next == NULL) {

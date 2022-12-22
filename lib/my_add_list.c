@@ -24,7 +24,7 @@ linked_list_t *my_add_list(linked_list_t *list, int data, int pos)
     linked_list_t *cur = list;
     linked_list_t *create = my_create_list(data);
 
-    if (is_empty_list(list) == 84)
+    if (my_is_empty_list(list) == 84)
         return create;
     if (pos == 0) {
         create->next = list;

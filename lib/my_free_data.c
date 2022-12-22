@@ -12,7 +12,7 @@ linked_list_t *my_free_data(linked_list_t *list, int pos)
     linked_list_t *before = list;
     linked_list_t *cur = list;
 
-    if (is_empty_list(list) == 84)
+    if (my_is_empty_list(list) == 84)
         return NULL;
     if (pos == 0) {
         list = list->next;
