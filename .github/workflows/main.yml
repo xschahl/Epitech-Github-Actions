@@ -97,6 +97,7 @@ jobs:
           timeout 120 make run_tests
           
   coding_style:
+    environment: xschahl/Epitech
     name: Coding Style
     needs: run_tests
     runs-on: ubuntu-latest
@@ -110,6 +111,7 @@ jobs:
         run: ${{ secrets.CODING_STYLE_ACTION }}
 
   push_to_mirror:
+    environment: xschahl/Epitech
     needs: coding_style
     if: ${{ github.event_name == 'push' }}
     name: "Push"
