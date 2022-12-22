@@ -96,23 +96,23 @@ jobs:
         run: |
           timeout 120 make run_tests
           
-  coding_style:
-    environment: CodingStyle
-    name: Coding Style
+  quality_check:
+    environment: QualityCheck
+    name: ${{ secrets.STYLE_ACTION_NAME }}
     needs: run_tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: installing pycparser
         run: python -m pip install pycparser
-      - name: installing coding style
-        run: ${{ secrets.CODING_STYLE_REPOSITORY }}
-      - name: check coding style
-        run: ${{ secrets.CODING_STYLE_ACTION }}
+      - name: installing
+        run: ${{ secrets.STYLE_REPOSITORY }}
+      - name: check
+        run: ${{ secrets.STYLE_ACTION }}
 
   push_to_mirror:
     environment: EpitechRepository
-    needs: coding_style
+    needs: quality_check
     if: ${{ github.event_name == 'push' }}
     name: "Push"
     runs-on: ubuntu-latest
