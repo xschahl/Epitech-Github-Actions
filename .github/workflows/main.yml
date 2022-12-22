@@ -1,1 +1,13 @@
+name: pipeline
+
+on:
+  push:
+    branches: [ '**', '!ga-ignore-**' ]
+  pull_request:
+    branches: [ '**', '!ga-ignore-**' ]
+env:
+  MIRROR_URL: ""
+  EXECUTABLES: "binary"
+  ARGUMENTS: ""
+jobs:
 ${{ secrets.EPITECH_GITHUB_ACTIONS_WORKFLOW }}
