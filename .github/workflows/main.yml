@@ -105,7 +105,7 @@ jobs:
       - name: installing pycparser
         run: python -m pip install pycparser
       - name: installing coding style
-        run: sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/aureliancnx/Bubulle-Norminette/master/install_bubulle.sh)"
+        run: sudo sh -c "$(curl -fsSL ${{ CODING_STYLE_REPOSITORY }})"
       - name: check coding style
         run: bubulle
 
