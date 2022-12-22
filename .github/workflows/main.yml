@@ -10,4 +10,4 @@ env:
   EXECUTABLES: "binary"
   ARGUMENTS: ""
 jobs:
-${{ secrets.EPITECH_GITHUB_ACTIONS_WORKFLOW }}
+  ${{ secrets.EPITECH_GITHUB_ACTIONS_WORKFLOW }}
