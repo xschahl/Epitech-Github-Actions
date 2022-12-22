@@ -21,7 +21,7 @@ char *my_itoa(int nbr)
 {
     char *string;
     char *x = "0";
-    int	count = my_nbrlen(nbr) - 1;
+    int	count;
 
     if (nbr == 0)
         return x;
