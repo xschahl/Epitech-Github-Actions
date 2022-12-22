@@ -51,7 +51,6 @@ jobs:
           fi
   
   check_program_compilation:
-    environment: Build
     name: Build
     needs: check_repository_cleanliness
     runs-on: ubuntu-latest
