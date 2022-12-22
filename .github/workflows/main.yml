@@ -86,23 +86,10 @@ jobs:
           done
         env:
           EXECUTABLES: ${{ secrets.EXECUTABLES }}
-  
-  coding_style:
-    name: Coding Style
-    needs: check_program_compilation
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: installing pycparser
-        run: python -m pip install pycparser
-      - name: installing coding style
-        run: sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/aureliancnx/Bubulle-Norminette/master/install_bubulle.sh)"
-      - name: check coding style
-        run: bubulle
 
   run_tests:
     name: Units Tests
-    needs: coding_style
+    needs: check_program_compilation
     runs-on: ubuntu-latest
     container:
       image: epitechcontent/epitest-docker:latest
@@ -113,9 +100,22 @@ jobs:
       - name: compil with exe
         run: |
           timeout 120 make run_tests
+          
+  coding_style:
+    name: Coding Style
+    needs: run_tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: installing pycparser
+        run: python -m pip install pycparser
+      - name: installing coding style
+        run: sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/aureliancnx/Bubulle-Norminette/master/install_bubulle.sh)"
+      - name: check coding style
+        run: bubulle
 
   push_to_mirror:
-    needs: run_tests
+    needs: coding_style
     if: ${{ github.event_name == 'push' }}
     name: "Push"
     runs-on: ubuntu-latest
