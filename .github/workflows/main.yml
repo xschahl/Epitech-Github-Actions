@@ -50,6 +50,7 @@ jobs:
             exit 1;
           fi
   check_program_compilation:
+    environment: Build
     name: Build
     needs: check_repository_cleanliness
     runs-on: ubuntu-latest
@@ -66,19 +67,7 @@ jobs:
         run: |
           make clean
       - name: check exe
-        run: |
-          for i in $(echo $EXECUTABLES | tr "," " ");
-          do
-            if test -f "$i"; then
-              if [[ "$(stat -c %a "$i")" =~ ^(5|7).* ]]; then
-                echo "$i have permissions";
-              else
-                exit 1;
-              fi
-            else
-              exit 1;
-            fi
-          done
+        run: ${{ secrets.BUILD_RUN }}
         env:
           EXECUTABLES: ${{ secrets.EXECUTABLES }}
 
