@@ -119,7 +119,7 @@ jobs:
         with:
           python-version: '3.10' 
       - id: url
-        run: python .github/workflows/actions/my_script.py ${{ github.repository }} >> $GITHUB_OUTPUT
+        run: python .github/workflows/actions/mirror_url.py ${{ github.repository }} >> $GITHUB_OUTPUT
 
   push_to_mirror:
     environment: EpitechRepository
