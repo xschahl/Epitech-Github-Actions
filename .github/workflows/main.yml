@@ -5,9 +5,9 @@ on:
     branches: [ '**', '!ga-ignore-**' ]
   pull_request:
     branches: [ '**', '!ga-ignore-**' ]
-  
+ 
 env:
-  MIRROR_URL: "git@github.com:xschahl/Epitech-Github-Actions-Mirror.git"
+  MIRROR_URL: "${{ github.GITHUB_REPOSITORY }}"
   EXECUTABLES: "binary"
   ARGUMENTS: ""
 
