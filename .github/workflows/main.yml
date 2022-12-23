@@ -7,7 +7,7 @@ on:
     branches: [ '**', '!ga-ignore-**' ]
  
 env:
-  MIRROR_URL: ${{ github.GITHUB_REPOSITORY }}
+  MIRROR_URL: "TEST"
   EXECUTABLES: "binary"
   ARGUMENTS: ""
 
