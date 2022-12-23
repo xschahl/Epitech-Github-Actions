@@ -15,15 +15,15 @@ jobs:
   test:
     name: TEST
     runs-on: ubuntu-latest
-    steps:
     outputs:
-      output1: ${{ steps.step1.outputs.test }}
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
-      with:
-        python-version: '3.10' 
-    - id: step1
-      run: python .github/workflows/actions/my_script.py ${{ env.MIRROR_URL }} > $GITHUB_OUTPUT
+      output1: ${{ test.step1.outputs.test }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+      - id: step1
+        run: python .github/workflows/actions/my_script.py ${{ env.MIRROR_URL }} > $GITHUB_OUTPUT
   
   check_repository_cleanliness:
     name: Repository Cleanliness
