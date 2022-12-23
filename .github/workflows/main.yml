@@ -33,7 +33,6 @@ jobs:
       - uses: actions/checkout@v3
       - name: Checks if the repository is clean          
         run: |
-          print(${{ needs.mirror_url.outputs.url }})
           ERROR=0;
           for i in $(find ! -path "./.git/**" -name \* ! -name ".git" -type f);
           do
@@ -135,5 +134,5 @@ jobs:
           fetch-depth: 0
       - uses: pixta-dev/repository-mirroring-action@v1.1.1
         with:
-          target_repo_url: ${{ env.MIRROR_URL }}
+          target_repo_url: ${{ needs.mirror_url.outputs.url }}
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
