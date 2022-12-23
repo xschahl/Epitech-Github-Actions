@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.10' 
       - id: url
-        run: python .github/workflows/actions/my_script.py ${{ env.MIRROR_URL }} ${{ github.repository }} >> $GITHUB_OUTPUT
+        run: python .github/workflows/actions/my_script.py ${{ env.MIRROR_URL }} "fhgfehfuizeg" >> $GITHUB_OUTPUT
   
   check_repository_cleanliness:
     name: Repository Cleanliness
