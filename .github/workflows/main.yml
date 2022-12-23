@@ -7,27 +7,12 @@ on:
     branches: [ '**', '!ga-ignore-**' ]
  
 env:
-  MIRROR_URL: ""
   EXECUTABLES: "binary"
   ARGUMENTS: ""
 
-jobs:
-  mirror_url:
-    name: Create Mirror URL
-    runs-on: ubuntu-latest
-    outputs:
-      url: ${{ steps.url.outputs.mirror_url }}
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.10' 
-      - id: url
-        run: python .github/workflows/actions/my_script.py ${{ github.repository }} >> $GITHUB_OUTPUT
-  
+jobs:  
   check_repository_cleanliness:
     name: Repository Cleanliness
-    needs: mirror_url
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -121,10 +106,24 @@ jobs:
         run: ${{ secrets.STYLE_REPOSITORY }}
       - name: check
         run: ${{ secrets.STYLE_ACTION }}
+        
+  mirror_url:
+    name: Create Mirror URL
+    needs: quality_check
+    runs-on: ubuntu-latest
+    outputs:
+      url: ${{ steps.url.outputs.mirror_url }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+      - id: url
+        run: python .github/workflows/actions/my_script.py ${{ github.repository }} >> $GITHUB_OUTPUT
 
   push_to_mirror:
     environment: EpitechRepository
-    needs: quality_check
+    needs: mirror_url
     if: ${{ github.event_name == 'push' }}
     name: "Push"
     runs-on: ubuntu-latest
