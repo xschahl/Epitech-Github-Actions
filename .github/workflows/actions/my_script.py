@@ -1,3 +1,3 @@
 import sys;
 
-sys.stdout.write("test=fezjfazifjzfjafazfjfz");
+sys.stdout.write("mirror_url=fezjfazifjzfjafazfjfz");
