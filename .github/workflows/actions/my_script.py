@@ -1,3 +1,3 @@
 import sys;
 
-sys.stdout.write("fezjfazifjzfjafazfjfz");
+sys.stdout.write("test=fezjfazifjzfjafazfjfz");
