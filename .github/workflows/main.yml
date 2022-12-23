@@ -25,6 +25,7 @@ jobs:
   
   check_repository_cleanliness:
     name: Repository Cleanliness
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
