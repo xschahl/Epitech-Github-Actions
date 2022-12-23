@@ -16,7 +16,7 @@ jobs:
     name: TEST
     runs-on: ubuntu-latest
     outputs:
-      output1: ${{ test.step1.outputs.test }}
+      output1: ${{ steps.step1.outputs.test }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
