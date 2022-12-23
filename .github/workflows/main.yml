@@ -17,8 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Checks if the repository is clean
+      - name: Checks if the repository is clean          
         run: |
+          print(${{ env.MIRROR_URL }})
           ERROR=0;
           for i in $(find ! -path "./.git/**" -name \* ! -name ".git" -type f);
           do
