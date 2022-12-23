@@ -7,33 +7,33 @@ on:
     branches: [ '**', '!ga-ignore-**' ]
  
 env:
-  MIRROR_URL: "${{ github.repository }}"
+  MIRROR_URL: ""
   EXECUTABLES: "binary"
   ARGUMENTS: ""
 
 jobs:
-  test:
-    name: TEST
+  mirror_url:
+    name: Create Mirror URL
     runs-on: ubuntu-latest
     outputs:
-      output1: ${{ steps.step1.outputs.test }}
+      url: ${{ steps.url.outputs.mirror_url }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10' 
-      - id: step1
+      - id: url
         run: python .github/workflows/actions/my_script.py ${{ env.MIRROR_URL }} >> $GITHUB_OUTPUT
   
   check_repository_cleanliness:
     name: Repository Cleanliness
-    needs: test
+    needs: mirror_url
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Checks if the repository is clean          
         run: |
-          print(${{ needs.test.outputs.output1 }})
+          print(${{ needs.mirror_url.outputs.url }})
           ERROR=0;
           for i in $(find ! -path "./.git/**" -name \* ! -name ".git" -type f);
           do
