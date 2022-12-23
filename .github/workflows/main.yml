@@ -7,12 +7,22 @@ on:
     branches: [ '**', '!ga-ignore-**' ]
  
 env:
-  MIRROR_URL: |
-            return {{ github.repository }}
+  MIRROR_URL: "${{ github.repository }}"
   EXECUTABLES: "binary"
   ARGUMENTS: ""
 
 jobs:
+  
+  test:
+    name: TEST
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+    - run: python my_script.py
+  
   check_repository_cleanliness:
     name: Repository Cleanliness
     runs-on: ubuntu-latest
