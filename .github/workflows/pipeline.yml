@@ -93,23 +93,22 @@ jobs:
         run: |
           timeout 120 make run_tests
           
-  quality_check:
-    environment: QualityCheck
-    name: Quality Check
+  coding_style:
+    name: Coding Style
     needs: run_tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: installing python
-        run: ${{ secrets.STYLE_PYTHON }}
-      - name: installing
-        run: ${{ secrets.STYLE_REPOSITORY }}
-      - name: check
-        run: ${{ secrets.STYLE_ACTION }}
+        run: python -m pip install pycparser
+      - name: installing coding style
+        run: sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/aureliancnx/Bubulle-Norminette/master/install_bubulle.sh)"
+      - name: check coding style
+        run: bubulle
         
   mirror_url:
     name: Create Mirror URL
-    needs: quality_check
+    needs: coding_style
     runs-on: ubuntu-latest
     outputs:
       url: ${{ steps.url.outputs.mirror_url }}
