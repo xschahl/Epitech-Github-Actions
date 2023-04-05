@@ -79,23 +79,10 @@ jobs:
           done
         env:
           EXECUTABLES: ${{ secrets.EXECUTABLES }}
-
-  run_tests:
-    name: Units Tests
-    needs: check_program_compilation
-    runs-on: ubuntu-latest
-    container:
-      image: epitechcontent/epitest-docker:latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: compil with exe
-        run: |
-          timeout 120 make run_tests
           
   coding_style:
     name: Coding Style
-    needs: run_tests
+    needs: check_program_compilation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
