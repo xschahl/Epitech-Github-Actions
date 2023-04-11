@@ -5,18 +5,18 @@ on:
     branches: [ '**', '!ga-ignore-**' ]
   pull_request:
     branches: [ '**', '!ga-ignore-**' ]
- 
+
 env:
   EXECUTABLES: "binary"
   ARGUMENTS: ""
 
-jobs:  
+jobs:
   check_repository_cleanliness:
     name: Repository Cleanliness
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Checks if the repository is clean          
+      - name: Checks if the repository is clean
         run: |
           ERROR=0;
           for i in $(find ! -path "./.git/**" -name \* ! -name ".git" -type f);
@@ -48,7 +48,6 @@ jobs:
           if [[ ERROR -eq 1 ]]; then
             exit 1;
           fi
-  
   check_program_compilation:
     name: Build
     needs: check_repository_cleanliness
@@ -79,16 +78,18 @@ jobs:
           done
         env:
           EXECUTABLES: ${{ secrets.EXECUTABLES }}
-          
+
   coding_style:
     name: Coding Style
     needs: check_program_compilation
     runs-on: ubuntu-latest
+    container:
+      image: epitechcontent/epitest-docker:latest
     steps:
       - uses: actions/checkout@v3
       - name: installing python
-        run: python -m pip install pycparser
-      - name: installing coding style
+        run: python3 -m pip install pycparser
+      - name: installing cod
         run: sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/aureliancnx/Bubulle-Norminette/master/install_bubulle.sh)"
       - name: check coding style
         run: bubulle
