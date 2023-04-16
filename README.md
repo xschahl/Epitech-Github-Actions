@@ -1,4 +1,4 @@
-### Github Actions
+### Epitech-Github-Actions
 
 This pipeline is only for epitech projects in C language with a Makefile that allows to compile the project !
 
