@@ -19,3 +19,4 @@ git clone https://github.com/xschahl/Epitech-Github-Actions
 mv Epitech-Github-Actions/.github .
 rm -rf Epitech-Github-Actions
 ```
+Commit, Push, and the tests will run with each Push !
