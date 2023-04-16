@@ -16,6 +16,6 @@ You will receive an email if any of these three steps fail.
 Extract [Epitech-Github-Actions](https://github.com/xschahl/Epitech-Github-Actions) repository in your Epitech Project.
 ```
 git clone https://github.com/xschahl/Epitech-Github-Actions
-mv Epitech-Github-Actions/.github ../
+mv Epitech-Github-Actions/.github .
 rm -rf Epitech-Github-Actions
 ```
